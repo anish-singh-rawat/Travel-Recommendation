@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommendation</title>
 </head>
 <body>
-    <div>OK</div>
+  <h1>Your Recommendation</h1>
+  <div id="recommendation"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const recommendation = urlParams.get('recommendation');
+
+    if (recommendation) {
+      document.getElementById('recommendation').textContent = decodeURIComponent(recommendation);
+    } else {
+      document.getElementById('recommendation').textContent = "No recommendation found.";
+    }
+  </script>
 </body>
 </html>
