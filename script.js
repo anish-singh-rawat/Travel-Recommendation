@@ -5,11 +5,19 @@ document.getElementById("decision-tree-form").addEventListener("submit", functio
     const preference = document.getElementById("preference").value;
     const activity = document.getElementById("activity").value;
     const budget = document.getElementById("budget").value;
+
+    if (!preference || !activity || !budget) {
+      alert("Please fill out all fields.");
+      return;
+    }
   
-    // Recommendation logic
+    const basePath = "Recommendations";
+    const targetPath = `${basePath}/${preference}/${activity}/${budget}/index.html`;
+  
+    window.location.href = targetPath;
+  
     const recommendation = generateRecommendation(preference, activity, budget);
   
-    // Display recommendation
     const recommendationDiv = document.getElementById("recommendation");
     recommendationDiv.textContent = recommendation;
     recommendationDiv.classList.remove("hidden");
