@@ -12,6 +12,9 @@ document.getElementById("decision-tree-form").addEventListener("submit", functio
     }
   
     const basePath = "Recommendations";
+    console.log('preference',preference);
+    console.log('activity',activity);
+    console.log('budget',budget);
     const targetPath = `${basePath}/${preference}/${activity}/${budget}/index.html`;
   
     window.location.href = targetPath;
