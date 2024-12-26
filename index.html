@@ -29,7 +29,7 @@
       </div>
 
       <div class="question">
-        <label for="budget">What's your budget?</label>
+        <label for="budget">What’s your budget?</label>
         <select id="budget" required>
           <option value="">Select</option>
           <option value="Low">Low</option>
@@ -41,8 +41,12 @@
       <button type="submit">Get Recommendation</button>
     </form>
 
-    <div id="recommendation" class="recommendation hidden"></div>
+    <!-- Dynamic UI Containers -->
+    <div id="recommendation-container" class="hidden">
+      <p id="recommendation"></p>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
